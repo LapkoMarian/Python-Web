@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title></title>
+</head>
+<body style="background-color:#CADABA;">
+<h2 style="position:relative; left:46%;">Анкета</h2>
+ <form style="font-size:25px;" action="/cgi-bin/form.py" method="post">
+     <div style="position:relative; left:36%;">
+     Прізвище:<input style="font-size:25px;" type="text" name="lastname"><br>
+     Ім'я:<input style="font-size:25px;" type="text" name="firstname"><br><br>
+     </div>
+
+     <div style="position:relative; left:36%;">
+     Оберіть мови програмування, які ви вивчали:<br>
+     <input type="checkbox" name="prog_language" value="C++">C++<br>
+     <input type="checkbox" name="prog_language" value="Python">Python<br>
+     <input type="checkbox" name="prog_language" value="Java">Java<br>
+     <input type="checkbox" name="prog_language" value="Ruby">Ruby<br><br></div>
+
+     <div style="position:relative; left:36%;">
+     Вкажіть ваш досвід роботи:<br>
+     <input type="radio" name="expirience" value="без досвіду роботи">без досвіду роботи<br>
+     <input type="radio" name="expirience" value="1-12 місяців">1-12 місяців<br>
+     <input type="radio" name="expirience" value="1-3 роки">1-3 роки<br>
+     <input type="radio" name="expirience" value="3-5 років">3-5 років<br>
+     <input type="radio" name="expirience" value="більше 5 років">більше 5 років<br>
+     </div>
+     <div style="position:relative; left:43%;">
+     <p><input type="submit" style="font-size: 30px" value="Пітвердити"></p>
+     </div>
+ </form>
+
+</body>
+</html>
