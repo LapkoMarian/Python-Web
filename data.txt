@@ -1,0 +1,3 @@
+{"name": "Marian Lapko", "email": "marian.lapko.19@pnu.edu.ua", "body": "This is testing message!"}
+{"name": "Marian Lapko", "email": "marian.lapko.19@pnu.edu.ua", "body": "Hello world!\r\n"}
+{"name": "Marian Lapko", "email": "marian.lapko.19@pnu.edu.ua", "body": "Hello!"}
