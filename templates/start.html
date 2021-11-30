@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+{% from "_render_field.html" import render_field %}
+<html lang="en">
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Forms</h1>
+<h2>{{ error }}</h2>
+    <form method="POST">
+        {{ form.csrf_token }}
+
+        {{ render_field(form.email) }}
+
+        {{ render_field(form.password1) }}
+
+        {{ render_field(form.password2) }}
+
+        {{ render_field(form.number) }}
+
+        {{ render_field(form.year) }}
+
+        {{ render_field(form.pin) }}
+
+        {{ render_field(form.serial) }}
+
+        {% if serialerr %}
+            <ul>
+                <li style="color:red;">{{ serialerr }}</li>
+            </ul>
+        {% endif %}
+
+        {{ render_field(form.number_doc) }}
+
+        <p></p>
+
+        {% if numdocerror %}
+            <ul>
+                <li style="color:red;">{{ numdocerror }}</li>
+            </ul>
+        {% endif %}
+        <p></p>
+
+        <input type="submit" value="Sumbit">
+    </form>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+
+</body>
+</html>
