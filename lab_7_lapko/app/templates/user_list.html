@@ -1,0 +1,37 @@
+{% from "_render_field.html" import render_field %}
+{% extends 'base.html' %}
+{% block user_list %}
+<style type="text/css">
+  body{
+    background-image: url('../static/fon.png');
+  }
+  section{
+    margin-top: 100px;
+  }
+</style>
+<section class="vh-500">
+  <div class="container h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-lg-12 col-xl-11">
+        <div class="card text-black" style="border-radius: 25px;">
+          <div class="card-body p-md-5">
+            <div class="row justify-content-center">
+              <div class="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">
+                <p>Count users: {{ count }}</p>
+                <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-2 mt-2">Users</p>
+
+                {% for user in all_users %}
+                  <p class="h3 fw-bold">Username: {{ user.username }}</p>
+                  <p class="h3 fw-bold">Email: {{ user.email }}</p>
+                  <hr>
+                {% endfor %}
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}
