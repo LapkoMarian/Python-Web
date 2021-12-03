@@ -1,0 +1,21 @@
+{% from "_render_field.html" import render_field %}
+{% extends 'base.html' %}
+{% block error %}
+<style type="text/css">
+    body{
+        background-image: url('../static/fon.png');
+    }
+    p{
+        color: red;
+        text-align: center;
+        margin-top: 50px;
+        font-size: 50px;
+    }
+    .error{
+        font-size: 100px;
+    }
+</style>
+    <p class="error">Error 404</p>
+    <p>There are no registered users</p>
+{% endblock %}
+
