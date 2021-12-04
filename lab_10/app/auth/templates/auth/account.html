@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block content %}
+<style type="text/css">
+    body{
+        background-image: url('../static/fon.png');
+    }
+</style>
+{% block footer %}
+    <h1>{{ current_user.email }}</h1>
+    <h1>{{ current_user.username }}</h1>
+    <h1>{{ current_user.password }}</h1>
+{% endblock %}
+{% endblock %}
