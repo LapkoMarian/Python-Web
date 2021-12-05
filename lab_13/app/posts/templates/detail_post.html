@@ -1,0 +1,27 @@
+{% from "_render_field.html" import render_field %}
+{% extends 'base.html' %}
+{% block content %}
+<style type="text/css">
+    .fon{
+        background-image: url(../static/fon.png);
+    }
+</style>
+<body class="fon">
+<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/posts.css') }}">
+<div class="detail-post">
+    <div class="item-post">
+        <img src="/static/posts_pics/{{ pk.image_file }}" width="250px">
+        <p class="title">{{ pk.title }}</p>
+        <hr>
+        <p class="width-text">{{ pk.text }}</p>
+        <hr>
+    </div>
+    <div class="buttons">
+        {% if current_user.id == pk.post_id %}
+            <a href="{{ url_for('post.delete_post', pk=pk.id) }}"><button>Delete</button></a>
+            <a href="{{ url_for('post.update_post', pk=pk.id) }}"><button>Edit</button></a>
+        {% endif %}
+    </div>
+</div>
+</body>
+{% endblock %}
