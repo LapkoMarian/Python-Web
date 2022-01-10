@@ -1,0 +1,28 @@
+{% from "_render_field.html" import render_field %}
+{% extends 'base.html' %}
+{% block css %}
+<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/posts.css') }}">
+{% endblock %}
+{% block content %}
+<style type="text/css">
+    body{
+        background-image: url(../static/fon.png);
+    }
+</style>
+<div class="container">
+    <div class="row">
+
+        {% for film in films %}
+        <div class="col-md-4">
+            <div class="single-blog-item">
+                <div class="blog-content">
+                    <h4><a href="{{ url_for('film.detail_film', id=film.id) }}">{{ film.name_film }}</a></h4>
+                    <p>Жанр: {{ film.category.genre }}</p>
+                    <p>Дата виходу: {{ film.release_date }}</p>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

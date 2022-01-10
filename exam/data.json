@@ -1,0 +1,34 @@
+{
+    "mariklapko@gmail.com": {
+        "password": "fdTzbe2mPq6zxgw",
+        "number": "7854168",
+        "pin": "8547",
+        "year": "2017",
+        "serial": "B12",
+        "number_doc": "75896368"
+    },
+    "marian@gmail.com": {
+        "password": "qwerty",
+        "number": "4856312",
+        "pin": "2514",
+        "year": "2020",
+        "serial": "D43",
+        "number_doc": "25475369"
+    },
+    "vasa@gmail.com": {
+        "password": "fdTzbe2mPq6zxgw",
+        "number": "4136256",
+        "pin": "1263",
+        "year": "2019",
+        "serial": "H33",
+        "number_doc": "12547123"
+    },
+    "ivan@gmail.com": {
+        "password": "qwerty",
+        "number": "2514783",
+        "pin": "6544",
+        "year": "2020",
+        "serial": "B52",
+        "number_doc": "02145635"
+    }
+}

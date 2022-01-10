@@ -1,0 +1,39 @@
+{% from "_render_field.html" import render_field %}
+{% extends 'base.html' %}
+{% block content %}
+<style type="text/css">
+    .fon{
+        background-image: url(../static/fon.png);
+    }
+</style>
+<body class="fon">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/posts.css') }}">
+<div class="detail-post">
+    <div class="item-post">
+        <p>{{ pk.name_film }}</p>
+        <hr>
+        <p>Режисер: {{ pk.director }}</p>
+        <p>Жанр фільму: {{ pk.category.genre }}</p>
+        <p>Дата виходу: {{ pk.release_date }}</p>
+        <p>Тривалість: {{ pk.duration }}</p>
+        <p>Бюджет: {{ pk.budget }}</p>
+        <hr>
+        <p class="width-text">Про фільм:</p>
+        <p class="width-text">{{ pk.info }}</p>
+        <hr>
+    </div>
+    <div class="buttons">
+        {% if current_user.id == pk.user_id %}
+        <a href="{{ url_for('film.delete_film', id=pk.id) }}" 
+           onclick="return confirm('Are You Sure To Delete ?')"
+           class="btn btn-danger btn-xs">
+            Delete
+        </a>
+        <a href="{{ url_for('film.edit_film', id=pk.id) }}"> <!-- edit !-->
+            <button class="btn btn-primary">Edit</button>
+        </a>
+        {% endif %}
+    </div>
+</div>
+</body>
+{% endblock %}

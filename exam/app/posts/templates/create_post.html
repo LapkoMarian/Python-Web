@@ -1,0 +1,49 @@
+{% from "_render_field.html" import render_field %}
+{% extends 'base.html' %}
+{% block content %}
+<style type="text/css">
+    .fon{
+        background-image: url(../static/fon.png);
+    }
+    p{
+        text-align: center;
+        font-size: 50px;
+    }
+    .block-form-post {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(../static/fon.png);
+    }
+    .form-post {
+    border: 1px solid black;
+    border-radius: 25px;
+    margin-top: 25px;
+    padding: 20px 20px 20px 20px;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    }
+    .form-item {
+    width: 500px;
+    }
+</style>
+<body class="fon">
+<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/posts.css') }}">
+<form method="POST" enctype="multipart/form-data">
+    {{ form.csrf_token }}
+    
+    <div class="block-form-post">
+        <div class="form-post">
+            <p>Create Post</p>
+            <div class="form-item">{{ render_field(form.title) }}</div>
+            <div class="form-item">{{ render_field(form.text) }}</div>
+            <div class="form-item">{{ render_field(form.picture) }}</div>
+            <div class="form-item">{{ render_field(form.type) }}</div>
+            <div class="form-item">{{ render_field(form.submit) }}</div>
+        </div>
+    </div>
+
+</form>
+</body>
+{% endblock %}
